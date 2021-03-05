@@ -1,39 +1,90 @@
 const { Router } = require("express");
 const router = Router();
 
-//const express = require("express");
-//const router = express.Router();
+const data = require('./data.json');
+
+console.log(data);
 
 router.get('/', (req, res) => {
-    res.json({ "name": "John Doe" });
+    res.json(data);
 });
 
-router.get('/api/plantas/{id}', (req, res) => {
-    res.json({ "name": "John Doe" });
+router.get('/:id', (req, res) => {
+    const { id } = req.params;
+    data.forEach(planta => {
+        if (planta.id == id) {
+            res.json(planta);
+            console.log(planta.name);
+        }
+    });
 });
 
-router.get('/api/plantas/humedad/{id}', (req, res) => {
-    res.json({ "name": "John Doe" });
+router.post('/', (req, res) => {
+    const { name, humedad, minerales, agua, historial } = req.body;
+    if (name && humedad && minerales && agua && historial) {
+        const id = data.length + 1;
+        const nuevaplanta = { id, ...req.body };
+        data.push(nuevaplanta);
+        //console.log(nuevaplanta);
+        res.status(200).json(data);
+    } else {
+        res.status(500).json({ error: 'no data' });
+        res.send("Err: No data");
+    }
 });
 
-router.get('/api/plantas/minerales/{id}', (req, res) => {
-    res.json({ "name": "John Doe" });
+//rutas
+
+router.get('/humedad/:id', (req, res) => {
+    data.forEach(planta => {
+        if (planta.id == id) {
+            res.json(planta.humedad);
+        }
+    });
 });
 
-router.get('/api/plantas/agua/{id}', (req, res) => {
-    res.json({ "name": "John Doe" });
+router.get('/minerales/:id', (req, res) => {
+    data.forEach(planta => {
+        if (planta.id == id) {
+            res.json(planta.minerales);
+        }
+    });
 });
 
-router.get('/api/plantas/agua/{id}', (req, res) => {
-    res.json({ "name": "John Doe" });
+router.get('/agua/:id', (req, res) => {
+    data.forEach(planta => {
+        if (planta.id == id) {
+            res.json(planta.agua);
+        }
+    });
 });
 
-router.get('/api/plantas/historial/{id}', (req, res) => {
-    res.json({ "name": "John Doe" });
+router.get('/historial/:id', (req, res) => {
+    const { id } = req.params;
+    data.forEach(planta => {
+        if (planta.id == id) {
+            res.json(planta.historial);
+        }
+    });
 });
 
-router.get('/api/plantas/historial/rangos/{id}/{fecha_inicial}/{fecha_final}', (req, res) => {
-    res.json({ "name": "John Doe" });
+router.get('/historial/rangos/:id/:start_date/:end_date', (req, res) => {
+    const { id } = req.params;
+    data.forEach(planta => {
+        if (planta.id == id) {
+            res.json(planta.historial);
+        }
+    });
 });
 
 module.exports = router;
+
+/*,
+{
+    "id": "6",
+    "name": "Ceylon",
+    "humedad": "",
+    "minerales": "",
+    "agua": "",
+    "historial": ""
+}*/

@@ -1,0 +1,41 @@
+[{
+        "id": "1",
+        "name": "Hibiscus",
+        "humedad": "Mojadito",
+        "minerales": "Nitrato",
+        "agua": "Si",
+        "historial": "Hoy"
+    },
+    {
+        "id": "2",
+        "name": "Orchid",
+        "humedad": "Mojadito",
+        "minerales": "Potasio",
+        "agua": "Si",
+        "historial": "Antier"
+    },
+    {
+        "id": "3",
+        "name": "Melantha",
+        "humedad": "Seco",
+        "minerales": "Potasio",
+        "agua": "Si",
+        "historial": "Hoy"
+    },
+    {
+        "id": "4",
+        "name": "Vanilla",
+        "humedad": "Seco",
+        "minerales": "itrato",
+        "agua": "Si",
+        "historial": "Hoy"
+    },
+    {
+        "id": "5",
+        "name": "Vigna",
+        "humedad": "Humedo",
+        "minerales": "Nitrato",
+        "agua": "Si",
+        "historial": "ayer"
+    }
+]
