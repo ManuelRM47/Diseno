@@ -36,6 +36,7 @@ router.post('/', (req, res) => {
 //rutas
 
 router.get('/humedad/:id', (req, res) => {
+    const {id} = req.params;
     data.forEach(planta => {
         if (planta.id == id) {
             res.json(planta.humedad);
@@ -44,6 +45,7 @@ router.get('/humedad/:id', (req, res) => {
 });
 
 router.get('/minerales/:id', (req, res) => {
+    const {id} = req.params;
     data.forEach(planta => {
         if (planta.id == id) {
             res.json(planta.minerales);
@@ -52,6 +54,7 @@ router.get('/minerales/:id', (req, res) => {
 });
 
 router.get('/agua/:id', (req, res) => {
+    const {id} = req.params;
     data.forEach(planta => {
         if (planta.id == id) {
             res.json(planta.agua);
@@ -60,7 +63,7 @@ router.get('/agua/:id', (req, res) => {
 });
 
 router.get('/historial/:id', (req, res) => {
-    const { id } = req.params;
+    const {id} = req.params;
     data.forEach(planta => {
         if (planta.id == id) {
             res.json(planta.historial);
