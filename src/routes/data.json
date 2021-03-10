@@ -4,7 +4,11 @@
         "humedad": "Mojadito",
         "minerales": "Nitrato",
         "agua": "Si",
-        "historial": "Hoy"
+        "historial": {
+            "registro 1": "01/11/2021",
+            "registro 2": "01/14/2021",
+            "registro 3": "01/17/2021"
+        }
     },
     {
         "id": "2",
@@ -12,7 +16,11 @@
         "humedad": "Mojadito",
         "minerales": "Potasio",
         "agua": "Si",
-        "historial": "Antier"
+        "historial": {
+            "registro 1": "01/11/2021",
+            "registro 2": "01/14/2021",
+            "registro 3": "01/17/2021"
+        }
     },
     {
         "id": "3",
@@ -20,7 +28,11 @@
         "humedad": "Seco",
         "minerales": "Potasio",
         "agua": "Si",
-        "historial": "Hoy"
+        "historial": {
+            "registro 1": "01/11/2021",
+            "registro 2": "01/14/2021",
+            "registro 3": "01/17/2021"
+        }
     },
     {
         "id": "4",
@@ -28,7 +40,11 @@
         "humedad": "Seco",
         "minerales": "itrato",
         "agua": "Si",
-        "historial": "Hoy"
+        "historial": {
+            "registro 1": "01/11/2021",
+            "registro 2": "01/14/2021",
+            "registro 3": "01/17/2021"
+        }
     },
     {
         "id": "5",
@@ -36,6 +52,10 @@
         "humedad": "Humedo",
         "minerales": "Nitrato",
         "agua": "Si",
-        "historial": "ayer"
+        "historial": {
+            "registro 1": "01/11/2021",
+            "registro 2": "01/14/2021",
+            "registro 3": "01/17/2021"
+        }
     }
 ]

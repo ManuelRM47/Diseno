@@ -36,6 +36,7 @@ router.post('/', (req, res) => {
 //rutas
 
 router.get('/humedad/:id', (req, res) => {
+    const { id } = req.params;
     data.forEach(planta => {
         if (planta.id == id) {
             res.json(planta.humedad);
@@ -44,6 +45,7 @@ router.get('/humedad/:id', (req, res) => {
 });
 
 router.get('/minerales/:id', (req, res) => {
+    const { id } = req.params;
     data.forEach(planta => {
         if (planta.id == id) {
             res.json(planta.minerales);
@@ -52,6 +54,7 @@ router.get('/minerales/:id', (req, res) => {
 });
 
 router.get('/agua/:id', (req, res) => {
+    const { id } = req.params;
     data.forEach(planta => {
         if (planta.id == id) {
             res.json(planta.agua);
@@ -69,10 +72,19 @@ router.get('/historial/:id', (req, res) => {
 });
 
 router.get('/historial/rangos/:id/:start_date/:end_date', (req, res) => {
-    const { id } = req.params;
+    const { id, start_date, end_date } = req.params;
+    const dt1 = new Date(decodeURIComponent(start_date));
+    const dt2 = new Date(decodeURIComponent(end_date));
+    var reg = [];
     data.forEach(planta => {
         if (planta.id == id) {
-            res.json(planta.historial);
+            for (var registro in planta.historial) {
+                var rdt = new Date(planta.historial[registro]);
+                if ((dt1.getTime() < rdt.getTime()) && (dt2.getTime() > rdt.getTime())) {
+                    reg.push(planta.historial[registro]);
+                }
+            }
+            res.json(reg);
         }
     });
 });

@@ -23,3 +23,6 @@ app.use('/api/plantas', require('./routes/rutas'));
 //inicio del servidor
 app.listen(app.get('port'));
 console.log("Hello World\n");
+
+var dt = new Date("01/17/2021");
+console.log(dt.getTime());
