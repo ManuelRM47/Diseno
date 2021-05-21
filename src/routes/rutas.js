@@ -60,13 +60,3 @@ router.get('/price/:id', (req, res) => {
 });
 
 module.exports = router;
-
-/*,
-{
-    "id": "6",
-    "name": "Ceylon",
-    "humedad": "",
-    "minerales": "",
-    "agua": "",
-    "historial": ""
-}*/
