@@ -3,79 +3,58 @@ const router = Router();
 
 const data = require('./data.json');
 
-console.log(data);
+//console.log(data);
 
 router.get('/', (req, res) => {
     res.json(data);
 });
 
+
+
 router.get('/:id', (req, res) => {
     const { id } = req.params;
-    data.forEach(planta => {
-        if (planta.id == id) {
-            res.json(planta);
-            console.log(planta.name);
+    data.forEach(product => {
+        if (product.id == id) {
+            res.json(product);
+            console.log(product.name);
         }
     });
-});
-
-router.post('/', (req, res) => {
-    const { name, humedad, minerales, agua, historial } = req.body;
-    if (name && humedad && minerales && agua && historial) {
-        const id = data.length + 1;
-        const nuevaplanta = { id, ...req.body };
-        data.push(nuevaplanta);
-        //console.log(nuevaplanta);
-        res.status(200).json(data);
-    } else {
-        res.status(500).json({ error: 'no data' });
-        res.send("Err: No data");
-    }
 });
 
 //rutas
 
-router.get('/humedad/:id', (req, res) => {
+router.get('/name/:id', (req, res) => {
     const {id} = req.params;
-    data.forEach(planta => {
-        if (planta.id == id) {
-            res.json(planta.humedad);
+    data.forEach(product => {
+        if (product.id == id) {
+            res.json(product.name);
         }
     });
 });
 
-router.get('/minerales/:id', (req, res) => {
+router.get('/category/:id', (req, res) => {
     const {id} = req.params;
-    data.forEach(planta => {
-        if (planta.id == id) {
-            res.json(planta.minerales);
+    data.forEach(product => {
+        if (product.id == id) {
+            res.json(product.category);
         }
     });
 });
 
-router.get('/agua/:id', (req, res) => {
+router.get('/img/:id', (req, res) => {
     const {id} = req.params;
     data.forEach(planta => {
         if (planta.id == id) {
-            res.json(planta.agua);
+            res.json(planta.img);
         }
     });
 });
 
-router.get('/historial/:id', (req, res) => {
+router.get('/price/:id', (req, res) => {
     const {id} = req.params;
     data.forEach(planta => {
         if (planta.id == id) {
-            res.json(planta.historial);
-        }
-    });
-});
-
-router.get('/historial/rangos/:id/:start_date/:end_date', (req, res) => {
-    const { id } = req.params;
-    data.forEach(planta => {
-        if (planta.id == id) {
-            res.json(planta.historial);
+            res.json(planta.price);
         }
     });
 });

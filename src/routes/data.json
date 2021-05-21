@@ -1,41 +1,64 @@
 [{
-        "id": "1",
-        "name": "Hibiscus",
-        "humedad": "Mojadito",
-        "minerales": "Nitrato",
-        "agua": "Si",
-        "historial": "Hoy"
+        "id": 0,
+        "name": "Chocolate Cake",
+        "category": 1,
+        "img": "choco.png",
+        "price": 7.00
     },
     {
-        "id": "2",
-        "name": "Orchid",
-        "humedad": "Mojadito",
-        "minerales": "Potasio",
-        "agua": "Si",
-        "historial": "Antier"
+        "id": 1,
+        "name": "Strawberry Cake",
+        "category": 1,
+        "img": "straw.png",
+        "price": 10.00
     },
     {
-        "id": "3",
-        "name": "Melantha",
-        "humedad": "Seco",
-        "minerales": "Potasio",
-        "agua": "Si",
-        "historial": "Hoy"
+        "id": 2,
+        "name": "Cherry Cake",
+        "category": 1,
+        "img": "cherry.png",
+        "price": 8.00
     },
     {
-        "id": "4",
-        "name": "Vanilla",
-        "humedad": "Seco",
-        "minerales": "itrato",
-        "agua": "Si",
-        "historial": "Hoy"
+        "id": 3,
+        "name": "Frappuccino",
+        "category": 2,
+        "img": "frap.png",
+        "price": 5.00
     },
     {
-        "id": "5",
-        "name": "Vigna",
-        "humedad": "Humedo",
-        "minerales": "Nitrato",
-        "agua": "Si",
-        "historial": "ayer"
+        "id": 4,
+        "name": "Iced Coffee",
+        "category": 2,
+        "img": "iced.png",
+        "price": 3.00
+    },
+    {
+        "id": 5,
+        "name": "Irish",
+        "category": 2,
+        "img": "irlandes.png",
+        "price": 6.00
+    },
+    {
+        "id": 6,
+        "name": "Twinkie Doge",
+        "category": 3,
+        "img": "twinkie.png",
+        "price": 2.00
+    },
+    {
+        "id": 7,
+        "name": "Bread Doge",
+        "category": 3,
+        "img": "bread.png",
+        "price": 4.00
+    },
+    {
+        "id": 8,
+        "name": "M&M",
+        "category": 3,
+        "img": "mm.png",
+        "price": 6.00
     }
 ]
