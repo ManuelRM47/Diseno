@@ -1,14 +1,17 @@
 const { Router } = require("express");
+const productController = require("../controller/productController");
 const router = Router();
 
 const data = require('./data.json');
 
+
+
 //console.log(data);
 
-router.get('/', (req, res) => {
-    res.json(data);
-});
+router.get('/', productController.getProducts);
 
+
+router.post('/', productController.createProduct);
 
 
 router.get('/:id', (req, res) => {

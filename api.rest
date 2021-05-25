@@ -1,0 +1,18 @@
+###
+
+GET http://localhost:3000/api/products
+
+###
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+    "id": 0,
+    "name": "Chocolate Cake",
+    "category": 1,
+    "img": "choco.png",
+    "price": 7.00
+}
+
+###
+GET http://localhost:3000/api/products/0
